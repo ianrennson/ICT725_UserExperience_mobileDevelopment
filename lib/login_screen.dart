@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'create_account_screen.dart';
-import 'forgot_password_screen.dart'; 
+import 'forgot_password_screen.dart';
+import 'account_logged_in_screen.dart'; 
+
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -53,6 +55,11 @@ class LoginScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   // Add login functionality here
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AccountLoggedInScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,

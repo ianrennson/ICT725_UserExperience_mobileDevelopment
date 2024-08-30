@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_screen.dart';
 class CreateAccountScreen extends StatelessWidget {
   const CreateAccountScreen({super.key});
 
@@ -69,7 +70,10 @@ class CreateAccountScreen extends StatelessWidget {
               // Create Account Button
               ElevatedButton(
                 onPressed: () {
-                  // Add create account functionality here
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,

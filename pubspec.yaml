@@ -61,6 +61,40 @@ flutter:
 
   assets:
     - assets/logo.png
+    - assets/interest_icon.png
+    - assets/mood_icon.png
+    - assets/commute_time_icon.png
+    - assets/interest_1.png
+    - assets/interest_2.png
+    - assets/interest_3.png
+    - assets/interest_4.png
+    - assets/interest_5.png
+    - assets/interest_6.png
+    - assets/interest_7.png
+    - assets/interest_8.png
+    - assets/interest_9.png
+    - assets/interest_10.png
+    - assets/interest_11.png
+    - assets/interest_12.png
+    - assets/interest_13.png
+    - assets/interest_14.png
+    - assets/interest_15.png
+    - assets/mood_1.png
+    - assets/mood_2.png
+    - assets/mood_3.png
+    - assets/mood_4.png
+    - assets/mood_5.png
+    - assets/mood_6.png
+    - assets/mood_7.png
+    - assets/mood_8.png
+    - assets/mood_9.png
+    - assets/mood_10.png
+    - assets/mood_11.png
+    - assets/mood_12.png
+    - assets/mood_13.png
+    - assets/mood_14.png
+    - assets/mood_15.png
+    - assets/hourglass.gif
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

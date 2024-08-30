@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
-import 'create_account_screen.dart';
-
+import 'login_screen.dart'; 
+import 'create_account_screen.dart'; 
+import 'account_logged_in_screen.dart'; 
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Center(
         child: Column(
@@ -17,16 +16,24 @@ class WelcomeScreen extends StatelessWidget {
             // Placeholder image widget
             Image.asset(
               'assets/logo.png', // Make sure this path is correct and the image exists
-              height: 300,
+              height: 150,
             ),
-            
-
-
+            const SizedBox(height: 20),
+            const Text(
+              'COMMUTE\nPodHub',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.orange,
+              ),
+            ),
             const SizedBox(height: 40),
+            
+            // Login Button
             ElevatedButton(
               onPressed: () {
-                // Placeholder for navigation
-                 Navigator.push(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
@@ -37,18 +44,14 @@ class WelcomeScreen extends StatelessWidget {
               ),
               child: const Text('LOGIN'),
             ),
-
-
-
-
-
-
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
+            
+            // Create Account Button
             ElevatedButton(
               onPressed: () {
-                 Navigator.push(
+                Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CreateAccountScreen()),
+                  MaterialPageRoute(builder: (context) => const CreateAccountScreen()), // Navigate to Create Account Screen
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -57,14 +60,15 @@ class WelcomeScreen extends StatelessWidget {
               ),
               child: const Text('CREATE USER'),
             ),
-
-
-
-
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
+            
+            // Continue as Guest Button
             ElevatedButton(
               onPressed: () {
-                // Placeholder for navigation
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AccountLoggedInScreen()), // Navigate to Account Logged-in Screen
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
@@ -72,8 +76,6 @@ class WelcomeScreen extends StatelessWidget {
               ),
               child: const Text('continue as GUEST'),
             ),
-
-
           ],
         ),
       ),
