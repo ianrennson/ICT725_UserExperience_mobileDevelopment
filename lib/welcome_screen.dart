@@ -16,18 +16,9 @@ class WelcomeScreen extends StatelessWidget {
             // Placeholder image widget
             Image.asset(
               'assets/logo.png', // Make sure this path is correct and the image exists
-              height: 150,
+              height: 500,
             ),
-            const SizedBox(height: 20),
-            const Text(
-              'COMMUTE\nPodHub',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: Colors.orange,
-              ),
-            ),
+           
             const SizedBox(height: 40),
             
             // Login Button
