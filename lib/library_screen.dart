@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'content_player_screen.dart';
 import 'settings_screen.dart';
-import 'library_screen.dart';
+import 'home_screen.dart';
 import 'logout_scren.dart';
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+
+class LibraryScreen extends StatelessWidget {
+  const LibraryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeScreen'),
+        title: const Text('Your Library'),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: GestureDetector(
@@ -34,7 +35,6 @@ class HomeScreen extends StatelessWidget {
                   height: 30, 
                 ),
               ),
-             
             ],
           ),
         ],
@@ -67,12 +67,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LogoutScreen()),  // Navigate to LogoutScreen on tap
-                    );
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const LogoutScreen()),  // Navigate to LogoutScreen on tap
+                      );
                     },
                     child: Column(
                       children: [
@@ -90,75 +90,41 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Recommended Section with Arrow
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Recommended',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  Icon(Icons.arrow_forward_ios, size: 30, color: Color.fromARGB(255, 57, 11, 185)),
-                ],
+              // Favorites Section
+              const Text(
+                'Favorites',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
               _buildPodcastGridSection(
-                images: ['assets/tony_robbins.png', 'assets/business_wars.png', 'assets/joe_rogan.png'],
-                titles: ['Tony Robbins Podcast', 'Business Wars', 'The Joe Rogan Experience'],
+                images: ['assets/sad.png', 'assets/tony_robbins.png', 'assets/joe_rogan.png'],
+                titles: ['Feeling sad?', 'Tony Robbins Podcast', 'The Joe Rogan Experience'],
               ),
               const SizedBox(height: 20),
 
-              // Based on your Interest Section with Arrow
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Based on your Interest',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  Icon(Icons.arrow_forward_ios, size: 30, color: Color.fromARGB(255, 57, 11, 185)),
-                ],
+              // Playlist Section
+              const Text(
+                'Playlist',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
               _buildPodcastGridSection(
-                images: ['assets/language.png', 'assets/self_improvement.png', 'assets/technology.png'],
-                titles: ['Language', 'Self-Improvement', 'Technology'],
+                images: ['assets/technology.png', 'assets/self_improvement.png', 'assets/angry.png'],
+                titles: ['Technology', 'Self-Improvement', 'Feeling angry?'],
               ),
               const SizedBox(height: 20),
 
-              // Based on your Mood Section with Arrow
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Based on your mood',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  Icon(Icons.arrow_forward_ios, size: 30, color: Color.fromARGB(255, 57, 11, 185)), // Arrow icon
-                ],
+              // Downloaded Section
+              const Text(
+                'Downloaded',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
               _buildPodcastGridSection(
-                images: ['assets/sad.png', 'assets/excited.png', 'assets/angry.png'],
-                titles: ['Feeling sad?', 'Feeling excited?', 'Feeling angry?'],
+                images: ['assets/hustle.png', 'assets/science.png', 'assets/feelings.png'],
+                titles: ['Side Hustle Pro', 'Growth Mindset', 'Feeling Smart?'],
               ),
-              const SizedBox(height: 20),
-
-              // Commute Time Display
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Commute time left:',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '1 Hr 30 Min/s', 
-                    style: TextStyle(fontSize: 16),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 70),
 
               // Bottom Navigation Images with Labels
               Row(
