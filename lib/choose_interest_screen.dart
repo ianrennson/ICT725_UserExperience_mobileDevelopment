@@ -19,7 +19,7 @@ class ChooseInterestScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(50.0),
         child: Center(
           child: Column(
             children: [
@@ -42,7 +42,7 @@ class ChooseInterestScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                           'assets/interest_${index + 1}.png', // Example image names: interest_1.png, interest_2.png, ...
-                          height: 50,
+                          height: 100,
                         ),
                         const SizedBox(height: 10),
                         Text(interestNames[index]), // Use the name from the list

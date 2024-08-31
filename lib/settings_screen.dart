@@ -95,9 +95,9 @@ class SettingsScreen extends StatelessWidget {
                 'Settings',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 30), // Increased space between title and options
+              const SizedBox(height: 30), 
 
-              // Updated settings options with increased spacing and font size
+              
               _buildSettingsOption('Account'),
               _buildSettingsOption('Content and Display'),
               _buildSettingsOption('Privacy and Social'),
@@ -106,7 +106,7 @@ class SettingsScreen extends StatelessWidget {
               _buildSettingsOption('Notifications'),
               _buildSettingsOption('Advertisement'),
 
-              const SizedBox(height: 400), // Adjust bottom space before navigation bar
+              const SizedBox(height: 400), 
 
               // Bottom Navigation Images with Labels
               Row(
@@ -183,10 +183,10 @@ class SettingsScreen extends StatelessWidget {
 
   Widget _buildSettingsOption(String title) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 15.0), // Increased vertical padding
+      padding: const EdgeInsets.symmetric(vertical: 15.0), 
       child: Text(
         title,
-        style: const TextStyle(fontSize: 20), // Increased font size
+        style: const TextStyle(fontSize: 20), 
       ),
     );
   }

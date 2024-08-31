@@ -19,7 +19,7 @@ class SetMoodScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(50.0),
         child: Center(
           child: Column(
             children: [
@@ -41,11 +41,11 @@ class SetMoodScreen extends StatelessWidget {
                     return Column(
                       children: [
                         Image.asset(
-                          'assets/mood_${index + 1}.png', // Example image names: mood_1.png, mood_2.png, ...
-                          height: 50,
+                          'assets/mood_${index + 1}.png', 
+                          height: 100,
                         ),
                         const SizedBox(height: 10),
-                        Text(moodNames[index]), // Use the name from the list
+                        Text(moodNames[index]),
                       ],
                     );
                   }),
