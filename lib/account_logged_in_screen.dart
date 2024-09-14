@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'choose_interest_screen.dart'; // Import the Choose Interest Screen
-import 'set_mood_screen.dart'; // Import the Set Mood Screen
-import 'commute_time_screen.dart'; // Import the Commute Time Screen
-import 'home_screen.dart'; // Import the Home Screen
+import 'choose_interest_screen.dart'; 
+import 'set_mood_screen.dart'; 
+import 'commute_time_screen.dart'; 
+import 'home_screen.dart'; 
 
 class AccountLoggedInScreen extends StatelessWidget {
   const AccountLoggedInScreen({super.key});

@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             // Placeholder image widget
             Image.asset(
-              'assets/logo.png', // Make sure this path is correct and the image exists
+              'assets/logo.png', 
               height: 500,
             ),
            

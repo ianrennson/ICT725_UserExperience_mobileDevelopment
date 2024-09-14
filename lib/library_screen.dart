@@ -18,8 +18,8 @@ class LibraryScreen extends StatelessWidget {
           onTap: () {},
           child: Image.asset(
             'assets/search_icon.png',
-            width: 24,  // Adjust the width for the search icon
-            height: 24, // Adjust the height for the search icon
+            width: 24,  
+            height: 24, 
             color: Colors.black,
           ),
         ),
@@ -78,8 +78,8 @@ class LibraryScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                           'assets/logout_icon.png',
-                          width: 30,  // Adjust the width for the logout icon
-                          height: 30, // Adjust the height for the logout icon
+                          width: 30,  
+                          height: 30, 
                         ),
                         const SizedBox(height: 5),
                         const Text('Logout', style: TextStyle(fontSize: 12)), // Label for Logout
@@ -205,9 +205,9 @@ class LibraryScreen extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
-        mainAxisSpacing: 2,   // Reduced spacing between rows
-        crossAxisSpacing: 2,  // Reduced spacing between columns
-        childAspectRatio: 1,  // Adjusted ratio to make images larger
+        mainAxisSpacing: 2,   
+        crossAxisSpacing: 2,  
+        childAspectRatio: 1,  
       ),
       itemCount: images.length,
       itemBuilder: (context, index) {
@@ -215,13 +215,13 @@ class LibraryScreen extends StatelessWidget {
           children: [
             Image.asset(
               images[index],
-              height: 180,  // Increased image height
+              height: 180,  
             ),
             const SizedBox(height: 5),
             Text(
               titles[index],
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 18),  // Increased font size for better readability
+              style: const TextStyle(fontSize: 18),  
             ),
           ],
         );
